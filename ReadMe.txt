@@ -19,3 +19,6 @@ such as generate, new, update, version,
 --ng new ng new Z_Zhou_MyFavouriteVehicleBrands
     -- choose no for routing
     --choose scss for styling sheet
+    --commit at Github desktop and pushed to Github.com, noticed that node_modules
+    was not uploaded (the fold is pretty big, don't upload!!!, default without uploading)
+--set the version number of application to 0.0.1 in package.json   
