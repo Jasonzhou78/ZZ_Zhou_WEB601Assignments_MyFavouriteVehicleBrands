@@ -21,4 +21,6 @@ such as generate, new, update, version,
     --choose scss for styling sheet
     --commit at Github desktop and pushed to Github.com, noticed that node_modules
     was not uploaded (the fold is pretty big, don't upload!!!, default without uploading)
---set the version number of application to 0.0.1 in package.json   
+--set the version number of application to 0.0.1 in package.json, commit changes.
+1651
+--change the app name from Z_Zhou_MyFavouriteVehicleBrands to ZZ_Zhou_MyFavouriteVehicleBrands
