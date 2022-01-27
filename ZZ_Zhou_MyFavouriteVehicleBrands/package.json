@@ -7,9 +7,9 @@
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
-        "pipe": "generatepipe",
-        "component": "generatecomponent",
-        "directive": "generatedirective"
+        "pipe": "ng generatepipe",
+        "component": "ng generatecomponent",
+        "directive": "ng generatedirective"
     },
     "private": true,
     "dependencies": {
