@@ -24,3 +24,5 @@ such as generate, new, update, version,
 --set the version number of application to 0.0.1 in package.json, commit changes.
 1651
 --change the app name from Z_Zhou_MyFavouriteVehicleBrands to ZZ_Zhou_MyFavouriteVehicleBrands
+--add "pipe": "generatepipe" and "component": "generatecomponent" and "directive": "generatedirective" in package.json for running a command as a shortcut
+
