@@ -26,3 +26,9 @@ such as generate, new, update, version,
 --change the app name from Z_Zhou_MyFavouriteVehicleBrands to ZZ_Zhou_MyFavouriteVehicleBrands
 --add "pipe": "generatepipe" and "component": "generatecomponent" and "directive": "generatedirective" in package.json for running a command as a shortcut
 
+2127
+-- npm start, compile successfully
+-- go to github.com, go into application then https://stackblitz.com/github/Jasonzhou78/ZZ_Zhou_WEB601Assignments_MyFavouriteVehicleBrands/tree/main/ZZ_Zhou_MyFavouriteVehicleBrands
+unfortunately, it shows error(can not find the file)
+-- google it, maybe the application is invisible. Check visibility, it is private!
+-- change application from private to public, then rerun it. succeeded.
