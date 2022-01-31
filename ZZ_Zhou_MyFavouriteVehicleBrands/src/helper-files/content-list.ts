@@ -1,4 +1,6 @@
-class ContentList {
+import { Component } from '@angular/core';
+import { Content } from 'src/helper-files/content-interface';
+export class ContentList {
     private _cars: Content[]; //define a private array _cars
     constructor() {    //set the initial value of the _cars empty
         this._cars = [];
@@ -6,13 +8,10 @@ class ContentList {
     get cars(): Content[] {  // define a get function to return _cars
         return this._cars;
       }
-/*     set cars(newCars: Content[]) {
-        this._cars = newCars;
-      } */
 
       //function to add one car to end of _cars array
-      addCars (car:Content) {
-        this.cars.push(car);
+      addCars(car: Content) {
+        this._cars.push(car);
       }
       
       //function to return the length of _cars array
