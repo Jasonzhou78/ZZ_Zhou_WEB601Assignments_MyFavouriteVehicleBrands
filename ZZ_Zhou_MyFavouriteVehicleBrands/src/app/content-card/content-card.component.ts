@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ContentCardComponent implements OnInit {
   
   constructor() { 
-    let myContentList = new ContentList;
+    /* let myContentList = new ContentList; */
     let carBrand: Content[];
     carBrand = [
       {id: 1,
@@ -33,7 +33,7 @@ export class ContentCardComponent implements OnInit {
         type: 'Passenger car'}
       ];
     for (let i = 0; i<3; i++) {
-      myContentList = ContentList.addCars(carBrand[i]); 
+      /* myContentList = ContentList.addCars(carBrand[i]);  */
     };
   }
 
