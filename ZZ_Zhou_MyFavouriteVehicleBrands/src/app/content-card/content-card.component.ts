@@ -6,11 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content-card.component.scss']
 })
 export class ContentCardComponent implements OnInit {
-  
+  carBrand: Content[];
   constructor() { 
-    /* let myContentList = new ContentList; */
-    let carBrand: Content[];
-    carBrand = [
+    this.carBrand = [
       {id: 1,
       title: 'BMW',
       description: 'German brand',
