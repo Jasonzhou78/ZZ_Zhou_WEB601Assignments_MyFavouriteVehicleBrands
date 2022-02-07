@@ -2,8 +2,8 @@
 <table>
     <thead>
         <tr>
-            <td>ID</td>
-            <td>Title</td>
+            <td>Image</td>
+            <td colspan="2">Tag</td>
             <td>Description</td>
             <td>Creator</td>
             <td>Type</td>
@@ -11,8 +11,8 @@
     </thead>
     <tbody>
         <tr *ngFor="let item of myList">
-            <td>{{ item.id }}</td>
-            <td>{{ item.title }}</td>
+            <td><img [src]=item.imgURL alt="image" width="40"> </td>
+            <td *ngFor="let t of item.tag">{{ t }}</td>
             <td>{{ item.description }}</td>
             <td>{{ item.creator }}</td>
             <td>{{ item.type }}</td>

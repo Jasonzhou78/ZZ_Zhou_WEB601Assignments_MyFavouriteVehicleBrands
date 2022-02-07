@@ -13,22 +13,26 @@ export class ContentCardComponent implements OnInit {
       title: 'BMW',
       description: 'German brand',
       creator: 'Karl Rapp',
-      imgURL: 'https://www.bmw.ca/en/home.html',
-      type: 'Passenger car'},
+      imgURL: 'https://lezebre.lu/images/detailed/17/30011-bmw-logo.png',
+      type: 'Passenger car',
+      tag: ['BMW','B']},
     
       {id: 2,
         title: 'Volvo',
         description: 'Sweden brand',
         creator: 'Assar Gabrielsson',
-        imgURL: 'https://www.volvocars.com/en-ca/build?gclid=Cj0KCQiA6NOPBhCPARIsAHAy2zB_NSgNlcUA26XF3YBSanzLt73lzBpjwR4ZhrTmheXhGSo1-1-D8YkaAkuAEALw_wcB&gclsrc=aw.ds',
-        type: 'Passenger car and truck'},
+        imgURL: 'https://static.dezeen.com/uploads/2021/09/volvo_flat_logo_design_transport_dezeen_2364_col_sq_4.jpg',
+        type: 'Passenger car and truck',
+        tag: ['Vol','Volvo']},
     
       {id: 3,
-        title: 'Toyota',
+        title: 'Toyota motors',
         description: 'Japanese brand',
         creator: 'Kiichiro Toyoda',
-        imgURL: 'https://www.toyota.ca/toyota/en/',
-        type: 'Passenger car'}
+        imgURL: 'https://global.toyota/pages/global_toyota/mobility/toyota-brand/emblem_ogp_001.png',
+        type: 'Passenger car',
+        tag: ['T','Toyota']
+      }
       ];
     for (let i = 0; i<3; i++) {
       /* myContentList = ContentList.addCars(carBrand[i]);  */
