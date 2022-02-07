@@ -4,13 +4,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent { }
-export class ContentCardComponent implements OnInit {
-  
-  constructor() { 
-  }
-
+export class AppComponent { 
+  title = 'ZZ_Zhou Favourite Vehicle';
   ngOnInit(): void {
   }
-
 }
+
