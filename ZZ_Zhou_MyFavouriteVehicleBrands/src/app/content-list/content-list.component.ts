@@ -57,7 +57,15 @@ export class ContentListComponent implements OnInit {
         creator: 'August Horch',
         imgURL: "https://logowik.com/content/uploads/images/562_audi.jpg",
         type: 'Passenger car',
-        tag: ['A4','A6']}
+        tag: ['A4','A6']},
+
+      {id: 7,
+        title: 'Chrysler motors',
+        description: 'American brand',
+        creator: 'Walter P. Chrysler',
+        imgURL: "https://logos-world.net/wp-content/uploads/2021/08/Chrysler-Logo-700x394.png",
+        type: 'Passenger car',
+        tag: ['300','dodge']}  
     ];
    }
 
