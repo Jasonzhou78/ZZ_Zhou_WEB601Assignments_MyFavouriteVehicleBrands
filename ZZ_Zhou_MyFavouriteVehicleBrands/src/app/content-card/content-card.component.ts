@@ -1,4 +1,4 @@
-import { Content } from 'src/helper-files/content-interface';
+import { Content } from '../../helper-files/content-interface';
 import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-content-card',
