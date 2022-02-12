@@ -15,6 +15,7 @@ export class ContentCardComponent implements OnInit {
       creator: 'Karl Rapp',
       imgURL: 'https://lezebre.lu/images/detailed/17/30011-bmw-logo.png',
       type: 'Passenger car',
+      drive: 'Two',
       tag: ['BMW','B']},
     
       {id: 2,
@@ -23,6 +24,7 @@ export class ContentCardComponent implements OnInit {
         creator: 'Assar Gabrielsson',
         imgURL: 'https://static.dezeen.com/uploads/2021/09/volvo_flat_logo_design_transport_dezeen_2364_col_sq_4.jpg',
         type: 'Passenger car and truck',
+        drive: 'Four',
         tag: ['Vol','Volvo']},
     
       {id: 3,
@@ -31,6 +33,7 @@ export class ContentCardComponent implements OnInit {
         creator: 'Kiichiro Toyoda',
         imgURL: 'https://global.toyota/pages/global_toyota/mobility/toyota-brand/emblem_ogp_001.png',
         type: 'Passenger car',
+        drive: 'Two',
         tag: ['T','Toyota']
       }
       ];

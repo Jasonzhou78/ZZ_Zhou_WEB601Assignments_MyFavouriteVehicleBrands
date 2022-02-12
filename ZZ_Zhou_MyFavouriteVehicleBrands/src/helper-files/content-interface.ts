@@ -1,9 +1,10 @@
 export interface Content {
-    id: number,
-    title: string,
-    description: string,
-    creator: string,
-    imgURL?: string,
+    id: number;
+    title: string;
+    description: string;
+    creator: string;
+    drive: any;
+    imgURL?: string;
     type?: string;
     tag?: string[];
 }
