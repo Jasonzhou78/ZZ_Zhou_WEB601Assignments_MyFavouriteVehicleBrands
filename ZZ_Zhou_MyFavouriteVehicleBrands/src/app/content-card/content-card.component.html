@@ -6,15 +6,17 @@
             <td colspan="2">Tag</td>
             <td>Description</td>
             <td>Creator</td>
+            <td>Drive</td>
             <td>Type</td>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let item of carBrand">
+        <tr *ngFor="let item of items">
             <td><img [src]=item.imgURL alt="Image" width="40"></td>
             <td *ngFor="let t of item.tag">{{ t }}</td>
             <td>{{ item.description }}</td>
             <td>{{ item.creator }}</td>
+            <td>{{ item.drive }}</td>
             <td>{{ item.type }}</td>
         </tr>
     </tbody>
