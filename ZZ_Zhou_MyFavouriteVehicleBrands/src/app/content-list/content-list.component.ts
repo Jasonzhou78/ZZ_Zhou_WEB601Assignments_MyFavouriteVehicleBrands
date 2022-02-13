@@ -75,6 +75,9 @@ export class ContentListComponent implements OnInit {
         tags: ['300','dodge']}  
     ];
    }
+   get carList(){
+    return this.myList;
+  }
 
   ngOnInit(): void {
   }
