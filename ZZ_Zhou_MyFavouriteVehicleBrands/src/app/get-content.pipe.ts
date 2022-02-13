@@ -10,7 +10,6 @@ export class GetContentPipe implements PipeTransform {
     return myList.filter (f =>
       f.tags != null ? f.tags.length != 0 : false
     );
-    }
-    
+    }    
   } 
 
