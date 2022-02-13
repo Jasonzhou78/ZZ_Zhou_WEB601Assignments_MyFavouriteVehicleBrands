@@ -5,9 +5,9 @@ import { Content } from '../helper-files/content-interface';
 })
 export class GetContentPipe implements PipeTransform {
   
-  transform(value: any, ...args: any[]): any {
+  transform(item: string): [] {
     
-    return null;
+    return [];
   }
 
 }

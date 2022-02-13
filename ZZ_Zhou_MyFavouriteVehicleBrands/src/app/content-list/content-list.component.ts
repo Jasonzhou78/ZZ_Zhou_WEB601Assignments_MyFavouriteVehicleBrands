@@ -15,7 +15,7 @@ export class ContentListComponent implements OnInit {
       description: 'German brand',
       creator: 'Karl Rapp',
       imgURL: "https://lezebre.lu/images/detailed/17/30011-bmw-logo.png",
-      type: 'Passenger car',
+      type: 'sport car',
       drive: 'Four',
       tags: ['i7','535']},
     
@@ -24,7 +24,7 @@ export class ContentListComponent implements OnInit {
         description: 'Sweden brand',
         creator: 'Assar Gabrielsson',
         imgURL: "https://static.dezeen.com/uploads/2021/09/volvo_flat_logo_design_transport_dezeen_2364_col_sq_4.jpg",
-        type: 'Passenger car and truck',
+        type: 'truck',
         drive: 'Four',
         tags: ['XC60','X70']
       },
@@ -43,7 +43,7 @@ export class ContentListComponent implements OnInit {
         description: 'American brand',
         creator: 'Henry Ford',
         imgURL: "https://www.carlogos.org/car-logos/ford-logo-2017.png",
-        type: 'Passenger car and others',
+        type: 'truck',
         drive: 'Two',
         tags: ['Escape','F-150']},
 
@@ -52,7 +52,7 @@ export class ContentListComponent implements OnInit {
         description: 'American brand',
         creator: 'Willians C. Durant',
         imgURL: "https://static.dezeen.com/uploads/2021/01/gm-logo-rebrand-electric-vehicles-design_dezeen_2364_col_0-1.gif",
-        type: 'Passenger car and others',
+        type: 'Passenger car',
         drive: 'Two',
         tags: ['Buick','GMC']},
 
@@ -61,7 +61,7 @@ export class ContentListComponent implements OnInit {
         description: 'German brand',
         creator: 'August Horch',
         imgURL: "https://logowik.com/content/uploads/images/562_audi.jpg",
-        type: 'Passenger car',
+        type: 'sport car',
         drive: 'Four',
         tags: ['A4','A6']},
 
