@@ -1,23 +1,20 @@
-<!doctype html>
-<table>
-    <thead>
-        <tr>
-            <td>Image</td>
-            <td colspan="2">Tag</td>
-            <td>Description</td>
-            <td>Creator</td>
-            <td>Drive</td>
-            <td>Type</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let item of items">
-            <td><img [src]=item.imgURL alt="Image" width="40"></td>
-            <td *ngFor="let t of item.tag">{{ t }}</td>
-            <td>{{ item.description }}</td>
-            <td>{{ item.creator }}</td>
-            <td>{{ item.drive }}</td>
-            <td>{{ item.type }}</td>
-        </tr>
-    </tbody>
-</table>
+<h3 class="title">
+    {{ car?.title }}
+</h3>
+<img (click)="imageClicked()" *ngIf="car?.imgURL" class="image" [src]="car?.imgURL">
+<p>
+    {{ car?.description }}
+</p>
+<div class="meta-data">
+    <div class="creator">
+        {{ car?.creator}}
+    </div>
+    <div *ngIf="car?.type" class="car?.type">
+        {{ car?.type }}
+    </div>
+    <div class="tags" *ngIf="car?.tags">
+        <span class="tag" *ngFor="let tag of car?.tags">
+            #{{ tag }}
+        </span>
+    </div>
+</div>

@@ -6,5 +6,5 @@ export interface Content {
     drive: any;
     imgURL?: string;
     type?: string;
-    tag?: string[];
+    tags?: string[];
 }
