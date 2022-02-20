@@ -7,6 +7,8 @@ import { Content } from '../../helper-files/content-interface';
 })
 
 export class ContentListComponent implements OnInit {
+  searchMessage: string = "";
+  searchFlag: boolean = false;
   myList: Content[];
   constructor() {
     this.myList = [

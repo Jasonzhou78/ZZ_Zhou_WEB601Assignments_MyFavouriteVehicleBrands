@@ -3,7 +3,7 @@ export interface Content {
     title: string;
     description: string;
     creator: string;
-    drive: any;
+    drive?: any;
     imgURL?: string;
     type?: string;
     tags?: string[];

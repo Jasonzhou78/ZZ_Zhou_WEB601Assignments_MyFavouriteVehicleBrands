@@ -1,20 +1,2 @@
-<h3 class="title">
-    {{ car?.title }}
-</h3>
-<img (click)="imageClicked()" *ngIf="car?.imgURL" class="image" [src]="car?.imgURL">
-<p>
-    {{ car?.description }}
-</p>
-<div class="meta-data">
-    <div class="creator">
-        {{ car?.creator}}
-    </div>
-    <div *ngIf="car?.type" class="car?.type">
-        {{ car?.type }}
-    </div>
-    <div class="tags" *ngIf="car?.tags">
-        <span class="tag" *ngFor="let tag of car?.tags">
-            #{{ tag }}
-        </span>
-    </div>
-</div>
+<label>Please enter the type of cars: </label>
+<input type="text" name="type">
