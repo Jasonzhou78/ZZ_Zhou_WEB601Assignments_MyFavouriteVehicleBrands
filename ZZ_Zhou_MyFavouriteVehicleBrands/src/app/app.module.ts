@@ -4,12 +4,14 @@ import { AppComponent } from './app.component';
 import { ContentCardComponent } from './content-card/content-card.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { TitleFilterPipe } from './title-filter.pipe';
+import { HoverEffectDirective } from './hover-effect.directive';
 @NgModule({
   declarations: [
     AppComponent,
     ContentCardComponent,
     ContentListComponent,
     TitleFilterPipe,
+    HoverEffectDirective,
   ],
   imports: [
     BrowserModule

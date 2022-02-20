@@ -1,9 +1,9 @@
 <h3 class="title">
     {{ car?.title }}
 </h3>
-<img (click)="imageClicked()" *ngIf="car?.imgURL" class="image" [src]="car?.imgURL">
 <p>
-    {{ car?.description }}
+    <img (click)="imageClicked()" *ngIf="car?.imgURL" class="image" [src]="car?.imgURL">
+    <img (click)="imageClicked()" *ngIf="!car?.imgURL" class="image" src="https://www.supercars.net/blog/wp-content/uploads/2020/09/wallpaperflare.com_wallpaper-1-1.jpg">
 </p>
 <div class="meta-data">
     <div class="creator">
