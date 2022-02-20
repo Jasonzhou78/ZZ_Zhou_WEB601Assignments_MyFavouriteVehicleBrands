@@ -1,16 +1,15 @@
 import { NgModule, Pipe } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { ContentCardComponent } from './content-card/content-card.component';
 import { ContentListComponent } from './content-list/content-list.component';
-import { GetContentPipe } from './get-content.pipe';
+import { TitleFilterPipe } from './title-filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     ContentCardComponent,
     ContentListComponent,
-    GetContentPipe,
+    TitleFilterPipe,
   ],
   imports: [
     BrowserModule
