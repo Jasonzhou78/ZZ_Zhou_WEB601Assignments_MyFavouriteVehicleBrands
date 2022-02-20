@@ -6,7 +6,7 @@
     <!--  <div [class.success]="searchFlag" [class.fail]="!searchFlag"> {{ searchMessage }} </div>-->
 </div>
 
-<app-content-card appHoverEffect *ngFor="let item of myList; first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="notype" [class.found]="item.title == search.value"></app-content-card>
+<app-content-card *ngFor="let item of myList; first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="notype" [class.found]="item.title == search.value"></app-content-card>
 
 <!-- <app-content-card *ngFor="let item of (myList | titleFilter: 'suv'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="BMW motors" [class.found]="item.title == search.value"></app-content-card>
 

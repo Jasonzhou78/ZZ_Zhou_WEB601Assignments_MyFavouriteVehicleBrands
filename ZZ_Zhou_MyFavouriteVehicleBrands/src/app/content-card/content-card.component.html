@@ -9,12 +9,12 @@
     <div class="creator">
         {{ car?.creator}}
     </div>
-    <div *ngIf="car?.type" class="car?.type">
+    <div appHoverEffect *ngIf="car?.type" class="car?.type">
         {{ car?.type }}
     </div>
     <div class="tags" *ngIf="car?.tags">
-        <span class="tag" *ngFor="let tag of car?.tags">
-            #{{ tag }}
+        <span appHoverEffect class="tag" *ngFor="let tag of car?.tags">
+            {{ tag }}
         </span>
     </div>
 </div>
