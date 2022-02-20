@@ -16,7 +16,7 @@ export class ContentListComponent implements OnInit {
       title: 'BMW motors',
       description: 'German brand',
       creator: 'Karl Rapp',
-      imgURL: "https://lezebre.lu/images/detailed/17/30011-bmw-logo.png",
+      imgURL: "",
       tags: ['i7','535'],
       },
       
@@ -24,9 +24,9 @@ export class ContentListComponent implements OnInit {
         title: 'Volvo motors',
         description: 'Sweden brand',
         creator: 'Assar Gabrielsson',
-        imgURL: "https://static.dezeen.com/uploads/2021/09/volvo_flat_logo_design_transport_dezeen_2364_col_sq_4.jpg",
+        imgURL: "",
         tags: ['XC60','X70'],
-        type: 'SUV'
+        type: 'suv'
       },
     
       {id: 3,
@@ -42,7 +42,7 @@ export class ContentListComponent implements OnInit {
         creator: 'Henry Ford',
         imgURL: "https://www.carlogos.org/car-logos/ford-logo-2017.png",
         tags: ['Escape','F-150'],
-        type: 'Truck'},
+        type: 'truck'},
 
       {id: 5,
         title: 'General motors',
@@ -50,7 +50,7 @@ export class ContentListComponent implements OnInit {
         creator: 'Willians C. Durant',
         imgURL: "https://static.dezeen.com/uploads/2021/01/gm-logo-rebrand-electric-vehicles-design_dezeen_2364_col_0-1.gif",
         tags: ['Buick','GMC'],
-        type: 'Middle'},
+        type: 'middle'},
 
       {id: 6,
         title: 'Audi motors',
