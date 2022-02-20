@@ -1,12 +1,46 @@
-table td {
-    border: 1px solid black;
-    width: 120px;
+:host {
+    border: 1px solid #0000ff;
+    display: block;
+    margin: 16px auto;
+    padding: 8px;
+    width: 500px;
+    text-align: center;
 }
 
-thead tr td {
-    border-width: 2px;
+:host.first-movie {
+    border: 2px solid #000;
 }
 
-table {
-    margin: auto 0;
+:host.notype {
+    background-color: darksalmon;
+}
+
+:host.large {
+    background-color: dodgerblue;
+}
+
+:host.middle {
+    background-color: chartreuse;
+}
+
+:host.truck {
+    background-color: grey;
+}
+
+:host.found {
+    border-color: green;
+    border-width: 5px;
+}
+
+.image {
+    width: 100px;
+}
+
+.tag {
+    display: inline-block;
+    border-radius: 10px;
+    border: 1px solid #ff0000;
+    background-color: aqua;
+    margin: 8px;
+    padding: 8px;
 }
