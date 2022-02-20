@@ -10,9 +10,11 @@ export class ContentCardComponent implements OnInit {
   @Input() car?: Content;
   
   constructor() {
-    this.car = { id: 0, creator: '', title: '', description: '', drive: ''};
+    
   }
     ngOnInit(): void {
   }
-
+  imageClicked(): void {
+    console.log("ID: ", this.car?.id, ", Title: ", this.car?.title);
+  }
 }

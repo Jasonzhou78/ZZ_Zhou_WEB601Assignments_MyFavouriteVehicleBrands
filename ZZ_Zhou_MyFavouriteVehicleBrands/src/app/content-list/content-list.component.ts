@@ -17,14 +17,16 @@ export class ContentListComponent implements OnInit {
       description: 'German brand',
       creator: 'Karl Rapp',
       imgURL: "https://lezebre.lu/images/detailed/17/30011-bmw-logo.png",
-      tags: ['i7','535']},
-    
+      tags: ['i7','535'],
+      },
+      
       {id: 2,
         title: 'Volvo motors',
         description: 'Sweden brand',
         creator: 'Assar Gabrielsson',
         imgURL: "https://static.dezeen.com/uploads/2021/09/volvo_flat_logo_design_transport_dezeen_2364_col_sq_4.jpg",
-        tags: ['XC60','X70']
+        tags: ['XC60','X70'],
+        type: 'SUV'
       },
     
       {id: 3,
@@ -39,14 +41,16 @@ export class ContentListComponent implements OnInit {
         description: 'American brand',
         creator: 'Henry Ford',
         imgURL: "https://www.carlogos.org/car-logos/ford-logo-2017.png",
-        tags: ['Escape','F-150']},
+        tags: ['Escape','F-150'],
+        type: 'Truck'},
 
       {id: 5,
         title: 'General motors',
         description: 'American brand',
         creator: 'Willians C. Durant',
         imgURL: "https://static.dezeen.com/uploads/2021/01/gm-logo-rebrand-electric-vehicles-design_dezeen_2364_col_0-1.gif",
-        tags: ['Buick','GMC']},
+        tags: ['Buick','GMC'],
+        type: 'Middle'},
 
       {id: 6,
         title: 'Audi motors',
@@ -56,11 +60,12 @@ export class ContentListComponent implements OnInit {
         tags: ['A4','A6']},
 
       {id: 7,
-        title: 'Chrysler motors',
+        title: 'Chrysler 300',
         description: 'American brand',
         creator: 'Walter P. Chrysler',
         imgURL: "https://logos-world.net/wp-content/uploads/2021/08/Chrysler-Logo-700x394.png",
-        tags: ['300','dodge']}  
+        tags: ['300','dodge'],
+        type: 'large'}  
     ];
    }
 
