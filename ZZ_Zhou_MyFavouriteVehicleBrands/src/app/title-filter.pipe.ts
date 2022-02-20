@@ -6,7 +6,7 @@ import { Content } from '../helper-files/content-interface';
 export class TitleFilterPipe implements PipeTransform {
 
   transform(contentList: Content[], filterByThisType?: string): Content[] {
-    console.log("filter value: ", filterByThisType);
+    //console.log("filter value: ", filterByThisType);
     // return contentList.filter(c => c.type == filterByThisType);
     return contentList.filter(c => {
       if (filterByThisType) {
