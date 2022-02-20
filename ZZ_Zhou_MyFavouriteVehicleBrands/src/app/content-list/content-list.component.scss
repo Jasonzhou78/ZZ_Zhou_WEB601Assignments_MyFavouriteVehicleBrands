@@ -1,8 +1,11 @@
-table td {
-    border: 1px solid black;
-    width: 120px;
+/* app-content-card{
+    border: 1px solid #000;
+} */
+
+.fail {
+    color: red;
 }
 
-thead tr td {
-    border-width: 2px;
+.success {
+    color: green;
 }
