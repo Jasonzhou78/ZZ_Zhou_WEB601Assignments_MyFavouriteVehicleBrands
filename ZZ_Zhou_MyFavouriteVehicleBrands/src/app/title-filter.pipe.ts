@@ -12,7 +12,7 @@ export class TitleFilterPipe implements PipeTransform {
       if (filterByThisType) {
         return contentList.type == filterByThisType;
       } else {
-        return !filterByThisType;
+        return !contentList.type;
       }
     }
   }
