@@ -8,7 +8,7 @@ export class TitleFilterPipe implements PipeTransform {
   transform(contentList: Content[], filterByThisType?: string): Content[] {
     console.log("filter value: ", filterByThisType);
     // return contentList.filter(c => c.type == filterByThisType);
-    return contentList.filter();
+    return contentList.filter(checkType);
     
     //c => {
       //if (filterByThisType) {
@@ -17,6 +17,13 @@ export class TitleFilterPipe implements PipeTransform {
         //return !c.type; // keep items where type is not set as well
       //}
     //}
+    function checkType(contentList) {
+    if (filterBythisType) {
+      return contentList.type == filterByThisType;
+    }else {
+      return !contentList.type;
+    }
+    }
   }
 
 }
