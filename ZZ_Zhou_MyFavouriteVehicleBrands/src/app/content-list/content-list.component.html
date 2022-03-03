@@ -13,3 +13,10 @@
 <app-content-card *ngFor="let item of (myList | titleFilter: 'Middle'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="General Motors" [class.found]="item.title == search.value"></app-content-card>
 
 <app-content-card *ngFor="let item of (myList | titleFilter: 'Truck'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="Ford motors" [class.found]="item.title == search.value"></app-content-card>
+<app-content-card
+  *ngFor="let item of myList | titleFilter: 'large'; first as isFirstCarOnList"
+  [class.first-car]="isFirstCarOnList"
+  [car]="item"
+  class="Chrysler 300"
+  [class.found]="item.title == search.value"
+></app-content-card>
