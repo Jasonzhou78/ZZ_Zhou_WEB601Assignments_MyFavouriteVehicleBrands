@@ -12,5 +12,4 @@
 
 <app-content-card *ngFor="let item of (myList | titleFilter: 'large'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="Volvo motors" [class.found]="item.title == search.value"></app-content-card>
 
-<app-content-card *ngFor="let item of (myList | titleFilter: 'middle'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="General motors" [class.found]="item.title == search.value"></app-content-card>
-<app-content-card *ngFor="let item of (myList | titleFilter: 'truck'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="Ford motors" [class.found]="item.title == search.value"></app-content-card> -->
+<app-content-card *ngFor="let item of (myList | titleFilter: 'middle'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="Ford motors" [class.found]="item.title == search.value"></app-content-card> -->
