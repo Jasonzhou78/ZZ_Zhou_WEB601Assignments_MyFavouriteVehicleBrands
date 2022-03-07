@@ -1,6 +1,5 @@
 import { Component, OnInit,  } from '@angular/core';
 import { Content } from '../../helper-files/content-interface';
-import { CreateContentComponent } from '../create-content/create-content.component';
 @Component({
   selector: 'app-content-list',
   templateUrl: './content-list.component.html',
@@ -11,7 +10,6 @@ export class ContentListComponent implements OnInit {
   searchMessage: string = "";
   searchFlag: boolean = false;
   myList: Content[];
-  title?: string;
   constructor() {
     this.myList = [
       {id: 1,
@@ -68,8 +66,6 @@ export class ContentListComponent implements OnInit {
         imgURL: "https://logos-world.net/wp-content/uploads/2021/08/Chrysler-Logo-700x394.png",
         tags: ['300','dodge'],
         type: 'large'}];
-        this.title = 'Header 1';
-
    }
 
   ngOnInit(): void {
@@ -90,13 +86,19 @@ export class ContentListComponent implements OnInit {
 
   }
 
-  addCarToList(newCarFromCreateContent: Content) {
-    this.myList.push(newCarFromCreateContent);
-    this.myList = [...this.myList];
+  addCarToList(newCarFromChild: Content) {
+    console.log("old array values ", this.myList);
+
+    this.myList.push(newCarFromChild);
+
+    this.myList = [...this.myList]; 
+
+    console.log("Did the item get added? ", newCarFromChild);
+    console.log("new array values ", this.myList);
   }
 
-    ourPromise = new Promise((success, fail) => {
-    let testPass = false;
+  promiseType(testPass?:any) {
+  let ourPromise = new Promise((success, fail) => { 
     if (testPass) {
       success("Success was achieved!");
     }
@@ -104,4 +106,27 @@ export class ContentListComponent implements OnInit {
       fail("Failure :(");
     }
   });
+  console.log("First console log");
+  return ourPromise;
+}
+addContentToList(newCarFromChild: Content) {    
+  let testPass = true;
+  if (isNaN(newCarFromChild.id)) {
+    testPass = false;
+  }
+console.log(newCarFromChild, testPass,'newCarFromChild');
+let ourPromise = this.promiseType(testPass);
+ourPromise.then( (successMessage) => {
+console.log("The promise succeeded and came back with the following message: ", successMessage);
+console.log("old array values ", this.myList);
+this.myList.push(newCarFromChild);
+this.myList = [...this.myList]; // using the spread operator
+console.log("Did the car get added? ", newCarFromChild);
+console.log("new array values ", this.myList);
+})
+.catch( (failureMessage) => {
+console.log("The promise failed and came back with the following message: ", failureMessage);
+});
+}
+
 }

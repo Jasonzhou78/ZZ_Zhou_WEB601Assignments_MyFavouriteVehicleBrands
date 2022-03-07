@@ -1,21 +1,21 @@
-<div>
-    id: <input #id>
-</div>
-<div>
-    title: <input #title>
-</div>
+<div class="createCarForm">
+    <div class="id">
+        id: <input #id>
+    </div>
+    <div>
+        title: <input #title>
+    </div>
 
-<div>
-    description: <input #description>
+    <div>
+        description: <input #description>
+    </div>
+    <div>
+        type: <input #type>
+    </div>
+    <div>
+        creator: <input #creator>
+    </div>
+    <div>
+        <button (click)="addCar(id.value, title.value, description.value, type.value, creator.value)">Add Car</button>
+    </div>
 </div>
-<div>
-    type: <input #type>
-</div>
-<div>
-    creator: <input #creator>
-</div>
-<div>
-    <button (click)="addCar(id.value, title.value, description.value, type.value, creator.value)">Add ar</button>
-</div>
-
-<!-- <app-content-list></app-content-list> -->

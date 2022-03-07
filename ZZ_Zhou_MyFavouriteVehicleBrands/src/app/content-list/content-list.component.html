@@ -4,14 +4,14 @@
     <button (click)="checkForTitle(search.value)">Check For Title</button>
     <h4 class="success" *ngIf="searchFlag">Title found</h4>
     <h4 class="fail" *ngIf="!searchFlag">Title not found</h4>
-    <!--  <div [class.success]="searchFlag" [class.fail]="!searchFlag"> {{ searchMessage }} </div>-->
 </div>
 
-<app-content-card *ngFor="let item of myList; first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="notype" [class.found]="item.title == search.value"></app-content-card>
-<app-create-content></app-create-content>
+<app-content-card *ngFor="let item of myList | titleFilter; first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="notype" [class.found]="item.title == search.value"></app-content-card>
 
-<!-- <app-content-card *ngFor="let item of (myList | titleFilter: 'suv'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="BMW motors" [class.found]="item.title == search.value"></app-content-card>
+<app-content-card *ngFor="let item of (myList | titleFilter: 'suv'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="VolvoMotors" [class.found]="item.title == search.value"></app-content-card>
 
-<app-content-card *ngFor="let item of (myList | titleFilter: 'large'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="Volvo motors" [class.found]="item.title == search.value"></app-content-card>
+<app-content-card *ngFor="let item of (myList | titleFilter: 'large'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="Chrysler300" [class.found]="item.title == search.value"></app-content-card>
 
-<app-content-card *ngFor="let item of (myList | titleFilter: 'middle'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="Ford motors" [class.found]="item.title == search.value"></app-content-card> -->
+<app-content-card *ngFor="let item of (myList | titleFilter: 'middle'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="GeneralMotors" [class.found]="item.title == search.value"></app-content-card>
+
+<app-content-card *ngFor="let item of (myList | titleFilter: 'truck'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="FordMotors" [class.found]="item.title == search.value"></app-content-card>

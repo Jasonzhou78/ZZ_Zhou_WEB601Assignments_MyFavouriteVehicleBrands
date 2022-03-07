@@ -18,11 +18,10 @@ export class CreateContentComponent implements OnInit {
       id: parseInt(id),
       title: title,
       description: description,
+      type: type,
       creator: creator,
-      type: type
     };
     this.newCarEvent.emit(this.newCar);
-    /* console.log('click'); */
   }
 
 }
