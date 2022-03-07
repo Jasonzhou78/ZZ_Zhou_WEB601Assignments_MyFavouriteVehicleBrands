@@ -1,11 +1,12 @@
 <app-create-content (newCarEvent)="addCarToList($event)"></app-create-content>
+<app-content-card *ngFor="let car of myList" [car]="car"></app-content-card>
 <div class="search">
     <input #search>
     <button (click)="checkForTitle(search.value)">Check For Title</button>
     <h4 class="success" *ngIf="searchFlag">Title found</h4>
     <h4 class="fail" *ngIf="!searchFlag">Title not found</h4>
 </div>
-
+<!-- <div>
 <app-content-card *ngFor="let item of myList | titleFilter; first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="notype" [class.found]="item.title == search.value"></app-content-card>
 
 <app-content-card *ngFor="let item of (myList | titleFilter: 'suv'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="VolvoMotors" [class.found]="item.title == search.value"></app-content-card>
@@ -14,4 +15,5 @@
 
 <app-content-card *ngFor="let item of (myList | titleFilter: 'middle'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="GeneralMotors" [class.found]="item.title == search.value"></app-content-card>
 
-<app-content-card *ngFor="let item of (myList | titleFilter: 'truck'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="FordMotors" [class.found]="item.title == search.value"></app-content-card>
+<app-content-card *ngFor="let item of (myList | titleFilter: 'truck'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="FordMotors" [class.found]="item.title == search.value"></app-content-card> 
+</div> -->
