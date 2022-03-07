@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,  } from '@angular/core';
 import { Content } from '../../helper-files/content-interface';
 import { CreateContentComponent } from '../create-content/create-content.component';
 @Component({
@@ -11,6 +11,7 @@ export class ContentListComponent implements OnInit {
   searchMessage: string = "";
   searchFlag: boolean = false;
   myList: Content[];
+  title?: string;
   constructor() {
     this.myList = [
       {id: 1,
@@ -66,8 +67,9 @@ export class ContentListComponent implements OnInit {
         creator: 'Walter P. Chrysler',
         imgURL: "https://logos-world.net/wp-content/uploads/2021/08/Chrysler-Logo-700x394.png",
         tags: ['300','dodge'],
-        type: 'large'}  
-    ];
+        type: 'large'}];
+        this.title = 'Header 1';
+
    }
 
   ngOnInit(): void {
@@ -88,4 +90,18 @@ export class ContentListComponent implements OnInit {
 
   }
 
+  addCarToList(newCarFromCreateContent: Content) {
+    this.myList.push(newCarFromCreateContent);
+    this.myList = [...this.myList];
+  }
+
+    ourPromise = new Promise((success, fail) => {
+    let testPass = false;
+    if (testPass) {
+      success("Success was achieved!");
+    }
+    else {
+      fail("Failure :(");
+    }
+  });
 }

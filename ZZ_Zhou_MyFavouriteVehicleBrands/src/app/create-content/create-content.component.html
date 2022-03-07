@@ -1,14 +1,21 @@
 <div>
-    <label for="">ID: </label>
-    <input type="text" name="id"> <br>
-    <label for="">Title: </label>
-    <input type="text" name="title"> <br>
-    <label for="">Description: </label>
-    <input type="text" name="description"> <br>
-    <label for="">Creator: </label>
-    <input type="text" name="creator"> <br>
-    <label for="">Type: </label>
-    <input type="text" name="type"> <br>
-    <button (click)="sendItemUp">Add</button> <br>
+    id: <input #id>
 </div>
-<app-content-list></app-content-list>
+<div>
+    title: <input #title>
+</div>
+
+<div>
+    description: <input #description>
+</div>
+<div>
+    type: <input #type>
+</div>
+<div>
+    creator: <input #creator>
+</div>
+<div>
+    <button (click)="addCar(id.value, title.value, description.value, type.value, creator.value)">Add ar</button>
+</div>
+
+<!-- <app-content-list></app-content-list> -->
