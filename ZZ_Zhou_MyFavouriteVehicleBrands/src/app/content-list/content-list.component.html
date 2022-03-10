@@ -8,15 +8,15 @@
 
 <app-content-card *ngFor="let item of (myList | titleFilter); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="notype" [class.found]="item.title == search.value"></app-content-card>
 
-<app-content-card *ngFor="let item of (myList | titleFilter: 'SUV'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="Volvo Motors" [class.found]="item.title == search.value"></app-content-card>
+<app-content-card *ngFor="let item of (myList | titleFilter: 'SUV'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="VolvoMotors" [class.found]="item.title == search.value"></app-content-card>
 
-<app-content-card *ngFor="let item of (myList | titleFilter: 'Middle'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="General Motors" [class.found]="item.title == search.value"></app-content-card>
+<app-content-card *ngFor="let item of (myList | titleFilter: 'Middle'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="GeneralMotors" [class.found]="item.title == search.value"></app-content-card>
 
-<app-content-card *ngFor="let item of (myList | titleFilter: 'Truck'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="Ford motors" [class.found]="item.title == search.value"></app-content-card>
+<app-content-card *ngFor="let item of (myList | titleFilter: 'Truck'); first as isFirstCarOnList" [class.first-car]="isFirstCarOnList" [car]="item" class="FordMotors" [class.found]="item.title == search.value"></app-content-card>
 <app-content-card
-  *ngFor="let item of myList | titleFilter: 'large'; first as isFirstCarOnList"
+  *ngFor="let item of myList | titleFilter: 'Large'; first as isFirstCarOnList"
   [class.first-car]="isFirstCarOnList"
   [car]="item"
-  class="Chrysler 300"
+  class="Chrysler300"
   [class.found]="item.title == search.value"
 ></app-content-card>
