@@ -65,7 +65,7 @@ export class ContentListComponent implements OnInit {
         creator: 'Walter P. Chrysler',
         imgURL: "https://logos-world.net/wp-content/uploads/2021/08/Chrysler-Logo-700x394.png",
         tags: ['300','dodge'],
-        type: 'large'}  
+        type: 'Large'}  
     ];
    }
 
