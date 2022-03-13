@@ -11,9 +11,12 @@ export class ContentListComponent implements OnInit {
   searchMessage: string;
   searchFlag: boolean;
   listOfCars: Content[];
-  idNumber?:number = 1;
+  idNumber:number = 2;
+  specificCarById: Content[];
+  checkMessage = false;
   constructor(private carService: CarService) {
     this.listOfCars = [];
+    this.specificCarById = [];
     this.searchMessage = '';
     this.searchFlag = false;
     /* console.log("The list of cars: ")
@@ -26,8 +29,8 @@ export class ContentListComponent implements OnInit {
     this.carService.getContentObs().subscribe(carArray => {
       return this.listOfCars = carArray; // access bunch of food in the AppComponent object scope
     });
-    this.carService.getContentById(1).subscribe(carArray => this.listOfCars = carArray);
-    this.carService.getContentById(1).subscribe(carArray => {
+    this.checkMessage = false;
+    this.carService.getContentById(this.idNumber).subscribe(carArray => {
       return this.listOfCars = carArray; // access bunch of food in the AppComponent object scope
     });
     
