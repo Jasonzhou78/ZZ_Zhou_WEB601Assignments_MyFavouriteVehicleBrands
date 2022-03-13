@@ -13,7 +13,7 @@ export class CarService {
     return LISTOFCARS;
   }
 
-  getContentobs():Observable<Content[]> {
+  getContentObs():Observable<Content[]> {
     return of(LISTOFCARS);
   }
 }

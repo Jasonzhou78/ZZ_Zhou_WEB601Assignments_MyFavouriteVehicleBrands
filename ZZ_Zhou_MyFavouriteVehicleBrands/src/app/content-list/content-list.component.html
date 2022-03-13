@@ -8,7 +8,6 @@
 
 <app-content-card appHoverAffect elementType="card" *ngFor="let item of ( listOfCars| titleFilter); first as isFirstMovieOnList; last as isLast" [car]="item" class="notype" [class.found]="item.title == search.value">
 </app-content-card>
-
 <app-content-card appHoverAffect elementType="card" *ngFor="let item of (listOfCars | titleFilter: 'suv') first as isFirstMovieOnList; last as isLast" [car]="item" class="SUV" [class.found]="item.title == search.value">
 </app-content-card>
 

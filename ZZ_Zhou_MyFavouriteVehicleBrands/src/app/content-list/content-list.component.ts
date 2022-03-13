@@ -8,18 +8,26 @@ import { Content } from '../../helper-files/content-interface';
 })
 
 export class ContentListComponent implements OnInit {
-  searchMessage: string = "";
-  searchFlag: boolean = false;
+  searchMessage: string;
+  searchFlag: boolean;
   listOfCars: Content[];
   constructor(private carService: CarService) {
     this.listOfCars = [];
+    this.searchMessage = '';
+    this.searchFlag = false;
+    /* console.log("The list of cars: ")
+    console.log(this.listOfCars); */
    }
 
   ngOnInit(): void {
+    this.carService.getContentObs().subscribe(carArray => this.listOfCars = carArray); 
+    // asynchronous call, using a larger structured arrow function, which effectively works the same
+    this.carService.getContentObs().subscribe(carArray => {
+      return this.listOfCars = carArray; // access bunch of food in the AppComponent object scope
+    });
   }
-
   checkForTitle(searchValue: string): void{
-    let searchList = '';//this.myList.filter(c => c.title == searchValue);
+    let searchList = '';//this.searchList.filter(c => c.title == searchValue);
     if (searchList.length > 0){
       this.searchMessage  = "Found the car!";
       this.searchFlag = true;
