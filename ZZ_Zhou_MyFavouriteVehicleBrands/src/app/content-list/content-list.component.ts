@@ -32,11 +32,13 @@ export class ContentListComponent implements OnInit {
       this.searchMessage  = "Found the car!";
       this.searchFlag = true;
     }
+
     else{
       this.searchMessage  = "No car with that title";
       this.searchFlag = false;
     }
   }
+  
   donothing(){
 
   }
