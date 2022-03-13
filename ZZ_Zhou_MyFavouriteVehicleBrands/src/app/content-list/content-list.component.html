@@ -1,6 +1,6 @@
-<div>
-    <label>ID: {{ this.id }}</label>
-</div>
+<app-app-messages [messageContent]="this.messageOne"></app-app-messages>
+<app-app-messages [messageContent]="this.messageTwo"></app-app-messages>
+
 <div class="search">
     <input #search>
     <button (click)="checkForTitle(search.value)">Check For Title</button>
@@ -8,9 +8,13 @@
     <h4 class="fail" *ngIf="!searchFlag">Title not found</h4>
     <!--  <div [class.success]="searchFlag" [class.fail]="!searchFlag"> {{ searchMessage }} </div>-->
 </div>
-
+<div>The specifice car with ID: {{ this. id }}</div>
+<app-content-card appHoverAffect elementType="card" *ngFor="let item of specificCar; first as isFirstMovieOnList; last as isLast" [car]="item" class="notype" [class.found]="item.title == search.value">
+</app-content-card>
+<div>The car list without type: </div>
 <app-content-card appHoverAffect elementType="card" *ngFor="let item of ( listOfCars| titleFilter); first as isFirstMovieOnList; last as isLast" [car]="item" class="notype" [class.found]="item.title == search.value">
 </app-content-card>
+<div>The car list with types: </div>
 <app-content-card appHoverAffect elementType="card" *ngFor="let item of (listOfCars | titleFilter: 'SUV') first as isFirstMovieOnList; last as isLast" [car]="item" class="SUV" [class.found]="item.title == search.value">
 </app-content-card>
 
