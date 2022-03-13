@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CarService } from '../services/content.service';
 import { Content } from '../../helper-files/content-interface';
 @Component({
@@ -11,6 +11,7 @@ export class ContentListComponent implements OnInit {
   searchMessage: string;
   searchFlag: boolean;
   listOfCars: Content[];
+  idNumber?:number = 1;
   constructor(private carService: CarService) {
     this.listOfCars = [];
     this.searchMessage = '';
@@ -25,6 +26,11 @@ export class ContentListComponent implements OnInit {
     this.carService.getContentObs().subscribe(carArray => {
       return this.listOfCars = carArray; // access bunch of food in the AppComponent object scope
     });
+    this.carService.getContentById(1).subscribe(carArray => this.listOfCars = carArray);
+    this.carService.getContentById(1).subscribe(carArray => {
+      return this.listOfCars = carArray; // access bunch of food in the AppComponent object scope
+    });
+    
   }
   checkForTitle(searchValue: string): void{
     let searchList = '';//this.searchList.filter(c => c.title == searchValue);
