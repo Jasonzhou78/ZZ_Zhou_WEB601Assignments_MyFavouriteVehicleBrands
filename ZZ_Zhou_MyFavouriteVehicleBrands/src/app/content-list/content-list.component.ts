@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CarService } from '../services/content.service';
 import { Content } from '../../helper-files/content-interface';
 @Component({
@@ -11,14 +11,16 @@ export class ContentListComponent implements OnInit {
   searchMessage: string;
   searchFlag: boolean;
   listOfCars: Content[];
-  idNumber:number = 2;
-  specificCarById: Content[];
-  checkMessage = false;
+  specificCar: Content[];
+  id:number;
+  messageOne:string;
   constructor(private carService: CarService) {
     this.listOfCars = [];
-    this.specificCarById = [];
     this.searchMessage = '';
     this.searchFlag = false;
+    this.specificCar = [];
+    this.id = 3;
+    this.messageOne = "Content array loaded!"
     /* console.log("The list of cars: ")
     console.log(this.listOfCars); */
    }
@@ -26,14 +28,8 @@ export class ContentListComponent implements OnInit {
   ngOnInit(): void {
     this.carService.getContentObs().subscribe(carArray => this.listOfCars = carArray); 
     // asynchronous call, using a larger structured arrow function, which effectively works the same
-    this.carService.getContentObs().subscribe(carArray => {
-      return this.listOfCars = carArray; // access bunch of food in the AppComponent object scope
-    });
-    this.checkMessage = false;
-    this.carService.getContentById(this.idNumber).subscribe(carArray => {
-      return this.listOfCars = carArray; // access bunch of food in the AppComponent object scope
-    });
-    
+
+    this.carService.getContentById(this.id).subscribe(carArray => this.specificCar = carArray);
   }
   checkForTitle(searchValue: string): void{
     let searchList = '';//this.searchList.filter(c => c.title == searchValue);
