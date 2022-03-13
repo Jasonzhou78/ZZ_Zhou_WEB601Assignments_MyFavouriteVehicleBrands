@@ -16,7 +16,7 @@ export class ContentListComponent implements OnInit {
   listOfMessages: Message[];
   listOfCars: Content[];
   specificCar: Content[];
-  id:number;
+  idNumber: number = 0;
   messageOne:string;
   messageTwo:string;
   constructor(private carService: CarService, private messageService: MessageService) {
@@ -25,7 +25,7 @@ export class ContentListComponent implements OnInit {
     this.searchFlag = false;
     this.specificCar = [];
     this.listOfMessages = [];
-    this.id = 3;
+/*     this.id = 3; */
     this.messageOne = "";
     this.messageTwo = "";
    }
@@ -37,14 +37,14 @@ export class ContentListComponent implements OnInit {
     this.carService.getContentObs().subscribe(carArray => this.listOfCars = carArray); 
     // asynchronous call, using a larger structured arrow function, which effectively works the same
 
-    this.carService.getContentById(this.id).subscribe(carArray => this.specificCar = carArray);
+    //this.carService.getContentById(this.idNumber).subscribe(carArray => this.specificCar = carArray);
 
 
     if (this.listOfCars.length > 0) {
         this.messageOne = this.listOfMessages[0].description;
     }
     if(this.specificCar.length > 0) {
-      this.messageTwo = this.listOfMessages[1].description + this.id;
+      this.messageTwo = this.listOfMessages[1].description + this.idNumber;
     }else {
       this.messageTwo = "Cannot find the car";
     }
@@ -62,8 +62,12 @@ export class ContentListComponent implements OnInit {
     }
   }
   
-  donothing(){
+  addSpecificCar(){
+    this.carService.getContentById(this.idNumber).subscribe(carArray => this.specificCar = carArray);
+  }
 
+  onUpdateIdNumber(event: any) {
+  this.idNumber = parseInt((<HTMLInputElement>event.target).value);
   }
 
 }
