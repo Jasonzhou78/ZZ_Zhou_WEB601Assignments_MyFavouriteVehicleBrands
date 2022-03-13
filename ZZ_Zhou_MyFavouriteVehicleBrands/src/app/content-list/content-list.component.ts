@@ -19,13 +19,13 @@ export class ContentListComponent implements OnInit {
   idNumber: number = 0;
   messageOne:string;
   messageTwo:string;
+  errorMessage: string = '';
   constructor(private carService: CarService, private messageService: MessageService) {
     this.listOfCars = [];
     this.searchMessage = '';
     this.searchFlag = false;
     this.specificCar = [];
     this.listOfMessages = [];
-/*     this.id = 3; */
     this.messageOne = "";
     this.messageTwo = "";
    }
@@ -64,10 +64,14 @@ export class ContentListComponent implements OnInit {
   
   addSpecificCar(){
     this.carService.getContentById(this.idNumber).subscribe(carArray => this.specificCar = carArray);
+    if(this.idNumber<1 || this.idNumber > 7){
+      this.errorMessage = "The ID number is not effective!";
+    }
   }
 
   onUpdateIdNumber(event: any) {
   this.idNumber = parseInt((<HTMLInputElement>event.target).value);
+  
   }
 
 }
