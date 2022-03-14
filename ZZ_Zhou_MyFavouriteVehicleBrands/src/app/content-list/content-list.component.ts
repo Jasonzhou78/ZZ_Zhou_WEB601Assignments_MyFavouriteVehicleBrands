@@ -19,7 +19,7 @@ export class ContentListComponent implements OnInit {
   idNumber: number = 0;
   messageOne:string;
   messageTwo:string;
-  errorMessage: string = '';
+  messageThree: string = '';
   constructor(private carService: CarService, private messageService: MessageService) {
     this.listOfCars = [];
     this.searchMessage = '';
@@ -65,7 +65,9 @@ export class ContentListComponent implements OnInit {
   addSpecificCar(){
     this.carService.getContentById(this.idNumber).subscribe(carArray => this.specificCar = carArray);
     if(this.idNumber<1 || this.idNumber > 7){
-      this.errorMessage = "The ID number is not effective!";
+      this.messageThree = this.listOfMessages[2].description + this.idNumber;
+    } else {
+      this.messageThree = '';
     }
   }
 
