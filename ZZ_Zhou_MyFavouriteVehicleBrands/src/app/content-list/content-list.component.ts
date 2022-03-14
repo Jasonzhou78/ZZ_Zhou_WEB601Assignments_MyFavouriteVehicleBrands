@@ -17,6 +17,7 @@ export class ContentListComponent implements OnInit {
   listOfCars: Content[];
   specificCar: Content[];
   idNumber: number = 0;
+  idNumbers = [1,2,3,4,5,6,7];
   messageOne:string;
   messageTwo:string;
   messageThree: string = '';
@@ -64,8 +65,8 @@ export class ContentListComponent implements OnInit {
   
   addSpecificCar(){
     this.carService.getContentById(this.idNumber).subscribe(carArray => this.specificCar = carArray);
-    if(this.idNumber<1 || this.idNumber > 7){
-      this.messageThree = this.listOfMessages[2].description + this.idNumber;
+    if(!this.idNumbers.includes(this.idNumber)){
+      this.messageThree = this.listOfMessages[2].description;
     } else {
       this.messageThree = '';
     }
