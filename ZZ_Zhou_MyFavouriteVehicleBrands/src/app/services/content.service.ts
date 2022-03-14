@@ -1,7 +1,7 @@
 import { Injectable, Input } from '@angular/core';
 import { Content } from '../../helper-files/content-interface';
 import { Observable, of } from 'rxjs';
-import { LISTOFCARS } from 'src/helper-files/ContentDb';
+import { LISTOFCARS } from '../../helper-files/ContentDb';
 
 @Injectable({
   providedIn: 'root'
