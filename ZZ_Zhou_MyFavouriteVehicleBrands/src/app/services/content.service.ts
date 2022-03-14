@@ -1,4 +1,4 @@
-import { Injectable, Input } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Content } from '../../helper-files/content-interface';
 import { Observable, of } from 'rxjs';
 import { LISTOFCARS } from '../../helper-files/ContentDb';

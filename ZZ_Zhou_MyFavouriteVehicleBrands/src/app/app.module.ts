@@ -1,11 +1,13 @@
 import { NgModule, Pipe } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ContentCardComponent } from './content-card/content-card.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { TitleFilterPipe } from './title-filter.pipe';
 import { HoverEffectDirective } from './hover-effect.directive';
 import { AppMessagesComponent } from './app-messages/app-messages.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { AppMessagesComponent } from './app-messages/app-messages.component';
     AppMessagesComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

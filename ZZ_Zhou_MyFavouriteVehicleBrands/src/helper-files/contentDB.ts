@@ -1,4 +1,4 @@
-import { Content } from "../helper-files/content-interface";
+import { Content } from "./content-interface";
 
 export const LISTOFCARS: Content[] = [
     {id: 1,
