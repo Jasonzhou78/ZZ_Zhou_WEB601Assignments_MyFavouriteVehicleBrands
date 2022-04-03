@@ -1,18 +1,5 @@
-<app-app-messages [messageContent]="this.messageOne"></app-app-messages>
-<app-app-messages [messageContent]="this.messageTwo"></app-app-messages>
+<app-modify-content-component (newContentEvent)="addContentToList($event)"></app-modify-content-component>
 
-<div>
-    ID:
-    <input type="text" (input)="onUpdateIdNumber($event)">
-    <button (click)="addSpecificCar()">Retrieve a car
-    </button>
-    <p>{{ messageThree }}</p>
-    <div>The specifice car with ID: {{ this. idNumber }}</div>
-    <app-content-card appHoverAffect elementType="card" *ngFor="let item of specificCar; first as isFirstMovieOnList; last as isLast" [car]="item" class="specificCar" [class.found]="item.title == search.value">
-    </app-content-card>
-</div>
-<br>
-<br>
 <div class="search">
     <input #search>
     <button (click)="checkForTitle(search.value)">Check For Title</button>
@@ -21,18 +8,21 @@
     <!--  <div [class.success]="searchFlag" [class.fail]="!searchFlag"> {{ searchMessage }} </div>-->
 </div>
 
-<div>The car list without type: </div>
-<app-content-card appHoverAffect elementType="card" *ngFor="let item of ( listOfCars| titleFilter); first as isFirstMovieOnList; last as isLast" [car]="item" class="notype" [class.found]="item.title == search.value">
-</app-content-card>
-<div>The car list with types: </div>
-<app-content-card appHoverAffect elementType="card" *ngFor="let item of (listOfCars | titleFilter: 'SUV') first as isFirstMovieOnList; last as isLast" [car]="item" class="SUV" [class.found]="item.title == search.value">
+<app-content-card appHoverAffect elementType="card" *ngFor="let item of (carList | titleFilter); first as isFirstMovieOnList; last as isLast" [car]="item" class="notype" [class.found]="item.title == search.value">
 </app-content-card>
 
-<app-content-card appHoverAffect elementType="card" *ngFor="let item of (listOfCars | titleFilter: 'Truck'); first as isFirstMovieOnList; last as isLast" [car]="item" class="Truck" [class.found]="item.title == search.value">
+<app-content-card appHoverAffect elementType="card" *ngFor="let item of (carList | titleFilter: 'truck'); first as isFirstMovieOnList; last as isLast" [car]="item" class="Truck" [class.found]="item.title == search.value">
 </app-content-card>
 
-<app-content-card appHoverAffect elementType="card" *ngFor="let item of (listOfCars | titleFilter: 'Middle') first as isFirstMovieOnList; last as isLast" [car]="item" class="Middle" [class.found]="item.title == search.value">
+<app-content-card appHoverAffect elementType="card" *ngFor="let item of (carList | titleFilter: 'suv'); first as isFirstMovieOnList; last as isLast" [car]="item" class="SUV" [class.found]="item.title == search.value">
 </app-content-card>
 
-<app-content-card appHoverAffect elementType="card" *ngFor="let item of (listOfCars | titleFilter: 'Large'); first as isFirstMovieOnList; last as isLast" [car]="item" class="Large" [class.found]="item.title == search.value">
+<app-content-card appHoverAffect elementType="card" *ngFor="let item of (carList | titleFilter: 'large'); first as isFirstMovieOnList; last as isLast" [car]="item" class="Middle" [class.found]="item.title == search.value">
 </app-content-card>
+<app-content-card appHoverAffect elementType="card" *ngFor="let item of (carList | titleFilter: 'middle'); first as isFirstMovieOnList; last as isLast" [car]="item" class="Large" [class.found]="item.title == search.value">
+</app-content-card>
+
+<!-- <app-content-card appHoverAffect elementType="card" [firstOrLast]="isFirstMovieOnList || isLast"
+  *ngFor="let item of (movieList | contentTypeFilter: 'cartoon'); first as isFirstMovieOnList; last as isLast"
+  [class.first-movie]="isFirstMovieOnList" [movie]="item" class="cartoon" [class.found]="item.title == search.value">
+</app-content-card> -->
