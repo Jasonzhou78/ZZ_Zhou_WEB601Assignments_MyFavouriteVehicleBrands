@@ -2,6 +2,7 @@ import { Content } from '../../helper-files/content-interface';
 import { Component, Input, OnInit } from '@angular/core';
 import { InMemoryDataService } from '../services/in-memory-data.service';
 
+
 @Component({
   selector: 'app-content-card',
   templateUrl: './content-card.component.html',
