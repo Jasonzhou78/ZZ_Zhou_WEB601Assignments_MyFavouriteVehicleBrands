@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Content } from '../../helper-files/content-interface';
 import { CarService } from '../services/content.service';
-
+import { InMemoryDataService } from '../services/in-memory-data.service';
 @Component({
   selector: 'app-content-list',
   templateUrl: './content-list.component.html',

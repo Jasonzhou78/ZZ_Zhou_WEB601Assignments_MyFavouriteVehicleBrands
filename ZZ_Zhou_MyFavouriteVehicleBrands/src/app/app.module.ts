@@ -8,6 +8,17 @@ import { TitleFilterPipe } from './title-filter.pipe';
 import { HoverEffectDirective } from './hover-effect.directive';
 import { AppMessagesComponent } from './app-messages/app-messages.component';
 import { ModifyContentComponentComponent } from './modify-content-component/modify-content-component.component';
+import { HttpClientModule } from "@angular/common/http";
+import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
+import { InMemoryDataService } from "./services/in-memory-data.service";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import {MatDialogModule} from '@angular/material/dialog';
+import { CarDialogContentComponent } from './car-dialog-content/car-dialog-content.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -18,10 +29,23 @@ import { ModifyContentComponentComponent } from './modify-content-component/modi
     HoverEffectDirective,
     AppMessagesComponent,
     ModifyContentComponentComponent,
+    CarDialogContentComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService,  {
+      dataEncapsulation: false,
+      delay: 3000
+    }),
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule,
+    MatDialogModule,
+    MatCardModule,
+    MatDividerModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

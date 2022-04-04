@@ -21,7 +21,7 @@ export class InMemoryDataService implements InMemoryDbService {
       creator: 'Assar Gabrielsson',
       imgURL: "https://static.dezeen.com/uploads/2021/09/volvo_flat_logo_design_transport_dezeen_2364_col_sq_4.jpg",
       tags: ['XC60','X70'],
-      type: 'SUV'
+      type: 'suv'
     },
   
     {id: 3,
@@ -37,7 +37,7 @@ export class InMemoryDataService implements InMemoryDbService {
       creator: 'Henry Ford',
       imgURL: "https://www.carlogos.org/car-logos/ford-logo-2017.png",
       tags: ['Escape','F-150'],
-      type: 'Truck'},
+      type: 'truck'},
 
     {id: 5,
       title: 'General motors',
@@ -45,7 +45,7 @@ export class InMemoryDataService implements InMemoryDbService {
       creator: 'Willians C. Durant',
       imgURL: "https://static.dezeen.com/uploads/2021/01/gm-logo-rebrand-electric-vehicles-design_dezeen_2364_col_0-1.gif",
       tags: ['Buick','GMC'],
-      type: 'Middle'},
+      type: 'middle'},
 
     {id: 6,
       title: 'Audi motors',
@@ -60,13 +60,13 @@ export class InMemoryDataService implements InMemoryDbService {
       creator: 'Walter P. Chrysler',
       imgURL: "https://logos-world.net/wp-content/uploads/2021/08/Chrysler-Logo-700x394.png",
       tags: ['300','dodge'],
-      type: 'Large'}  
+      type: 'large'}  
   ];
 
   constructor() { }
 
   createDb() {
-    const car = this.LISTOFCARS
+    const car = this.LISTOFCARS;
     return {car};
   }
   genId(carList: Content[]): number {

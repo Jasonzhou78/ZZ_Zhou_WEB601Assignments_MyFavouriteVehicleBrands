@@ -1,28 +1,3 @@
 <div>
-    ID: <input [(ngModel)]="tempId">
+    <button mat-raised-button #tooltip="matTooltip" matTooltip="Info about the action" matTooltipHideDelay="100000" aria-label="Button that displays a tooltip that hides when scrolled out of the container" mat-raised-button color="primary" (click)="openDialog()">Add New Content</button>
 </div>
-<div>
-    Title: <input [(ngModel)]="newContent.title">
-</div>
-
-<div>
-    Image: <input [(ngModel)]="newContent.imgURL">
-</div>
-<div>
-    description: <input [(ngModel)]="newContent.description">
-</div>
-<div>
-    Type: <input [(ngModel)]="newContent.type">
-</div>
-<div>
-    Creator: <input [(ngModel)]="newContent.creator">
-</div>
-<div>
-    Tags: <input [(ngModel)]="tempTags">
-</div>
-<div>
-    <button (click)="addContentFromChild()">{{tempId === "" ? "Add New Movie" : "Update existing movie"}}</button>
-</div>
-<!-- <div class="error" *ngIf="errorMessage">
-    {{ errorMessage }}
-</div> -->

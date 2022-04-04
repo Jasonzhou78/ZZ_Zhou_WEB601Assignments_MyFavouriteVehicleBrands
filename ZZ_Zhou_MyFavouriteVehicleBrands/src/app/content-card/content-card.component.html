@@ -1,22 +1,30 @@
-<h3 class="title">
-    {{ car?.title }}
-</h3>
-<p>
-    <img (click)="imageClicked()" *ngIf="car?.imgURL" class="image" [src]="car?.imgURL">
-    <img (click)="imageClicked()" *ngIf="!car?.imgURL" class="image" src="https://www.supercars.net/blog/wp-content/uploads/2020/09/wallpaperflare.com_wallpaper-1-1.jpg">
-</p>
-<div class="meta-data">
-    <div class="creator">
-        {{ car?.creator}}
-    </div>
-    <div appHoverEffect *ngIf="car?.type" class="car?.type">
-        {{ car?.type }}
-    </div>
-    <div class="tags" *ngIf="car?.tags">
-        <span appHoverEffect class="tag" *ngFor="let tag of car?.tags">
-            {{ tag }}
-        </span>
-    </div>
-</div>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title class="title">
+            {{ car?.title }}
+        </mat-card-title>
+    </mat-card-header>
 
-<div></div>
+    <mat-card-content>
+        <p>
+            <img (click)="imageClicked()" *ngIf="car?.imgURL" class="image" [src]="car?.imgURL">
+            <img (click)="imageClicked()" *ngIf="!car?.imgURL" class="image" src="https://www.supercars.net/blog/wp-content/uploads/2020/09/wallpaperflare.com_wallpaper-1-1.jpg">
+        </p>
+        <div class="meta-data">
+            <div class="creator">
+                <mat-divider> {{ car?.creator}} </mat-divider>
+            </div>
+            <div appHoverEffect *ngIf="car?.type" class="car?.type">
+                {{ car?.type }}
+            </div>
+            <div class="tags" *ngIf="car?.tags">
+                <span appHoverEffect class="tag" *ngFor="let tag of car?.tags">
+                {{ tag }}
+            </span>
+            </div>
+        </div>
+
+        <div></div>
+    </mat-card-content>
+
+</mat-card>
