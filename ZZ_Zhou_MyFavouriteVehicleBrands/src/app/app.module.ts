@@ -19,6 +19,7 @@ import { CarDialogContentComponent } from './car-dialog-content/car-dialog-conte
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     AppMessagesComponent,
     ModifyContentComponentComponent,
     CarDialogContentComponent,
+    ContentDetailComponent,
   ],
   imports: [
     BrowserModule,
