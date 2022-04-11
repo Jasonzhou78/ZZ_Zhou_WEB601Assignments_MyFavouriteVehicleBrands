@@ -12,7 +12,7 @@ export class ContentListComponent implements OnInit {
   searchFlag: boolean = false;
   carList: Content[];
   constructor(private carService: CarService) {
-    this.carList = [];
+  this.carList = [];
   }
 
   ngOnInit(): void {
