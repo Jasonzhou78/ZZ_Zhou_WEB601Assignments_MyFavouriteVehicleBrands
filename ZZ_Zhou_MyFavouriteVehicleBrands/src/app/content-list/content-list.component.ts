@@ -24,17 +24,17 @@ export class ContentListComponent implements OnInit {
   checkForTitle(searchValue: string): void {
     let searchList = this.carList.filter(c => c.title == searchValue);
     if (searchList.length > 0) {
-      this.searchMessage = "Found the movie!";
+      this.searchMessage = "Found the car!";
       this.searchFlag = true;
     }
     else {
-      this.searchMessage = "No movie with that title";
+      this.searchMessage = "No car with that title";
       this.searchFlag = false;
     }
   }
   addContentToList(newContentItem: Content): void {
-    // this.movieList.push(newContentItem);
-    // this.movieList = [...this.movieList];
+    // this.carList.push(newContentItem);
+    // this.carList = [...this.carList];
 
     this.carService.getCarList().subscribe(list => {
       this.carList = list;

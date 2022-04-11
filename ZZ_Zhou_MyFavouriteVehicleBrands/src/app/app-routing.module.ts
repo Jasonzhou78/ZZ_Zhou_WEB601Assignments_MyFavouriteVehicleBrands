@@ -7,7 +7,7 @@ import { ContentDetailComponent } from '../app/content-detail/content-detail.com
 
 const routes: Routes = [
   {
-    path:"content",
+    path:"list",
     component: ContentListComponent,
   },
   {
@@ -24,4 +24,7 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+ }
+
+

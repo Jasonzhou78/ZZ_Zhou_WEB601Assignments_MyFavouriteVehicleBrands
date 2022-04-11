@@ -31,9 +31,9 @@ export class CarService {
   getSingleCar(id: number): Observable<Content> {
 
     return this.http.get<Content>("api/car/" + id);
-    // if (id < MOVIELIST.length && id >= 0)
+    // if (id < CARLIST.length && id >= 0)
     // {
-    //   return of(MOVIELIST[id]);
+    //   return of(CARLIST[id]);
       
     // }
     // else {
