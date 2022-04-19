@@ -49,7 +49,7 @@ import { AppRoutingModule } from './app-routing.module';
     MatDialogModule,
     MatCardModule,
     MatDividerModule,
-    MatTooltipModule
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
