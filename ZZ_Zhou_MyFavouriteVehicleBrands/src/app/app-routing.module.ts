@@ -7,10 +7,11 @@ const routes: Routes = [{ path: 'id', component: ContentDetailComponent }];
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule
-  ],
+  imports: 
+  // this hooks up our routes so they work
+  [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 
 export class AppRoutingModule { }
+export const routingComponents = [ContentDetailComponent]
