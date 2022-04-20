@@ -11,7 +11,7 @@
     <!--  <div [class.success]="searchFlag" [class.fail]="!searchFlag"> {{ searchMessage }} </div>-->
 </div>
 
-<app-content-card appHoverAffect elementType="card" *ngFor="let item of ( carList| titleFilter); first as isFirstMovieOnList; last as isLast" [car]="item" class="notype" [class.found]="item.title == search.value">
+<app-content-card click="getSingleCar()" appHoverAffect elementType="card" *ngFor="let item of ( carList| titleFilter); first as isFirstMovieOnList; last as isLast" [car]="item" class="notype" [class.found]="item.title == search.value">
 </app-content-card>
 <div>The car list with types: </div>
 <app-content-card appHoverAffect elementType="card" *ngFor="let item of (carList | titleFilter: 'suv') first as isFirstMovieOnList; last as isLast" [car]="item" class="SUV" [class.found]="item.title == search.value">

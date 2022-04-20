@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Content } from '../../helper-files/content-interface';
 import { CarService } from '../services/content.service';
 import { InMemoryDataService } from '../services/in-memory-data.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-content-list',
   templateUrl: './content-list.component.html',
@@ -11,7 +12,7 @@ export class ContentListComponent implements OnInit {
   searchMessage: string = "";
   searchFlag: boolean = false;
   carList: Content[];
-  constructor(private carService: CarService) {
+  constructor(private carService: CarService, private router: Router) {
     this.carList = [];
   }
 
@@ -24,20 +25,24 @@ export class ContentListComponent implements OnInit {
   checkForTitle(searchValue: string): void {
     let searchList = this.carList.filter(c => c.title == searchValue);
     if (searchList.length > 0) {
-      this.searchMessage = "Found the movie!";
+      this.searchMessage = "Found the car!";
       this.searchFlag = true;
     }
     else {
-      this.searchMessage = "No movie with that title";
+      this.searchMessage = "No car with that title";
       this.searchFlag = false;
     }
   }
   addContentToList(newContentItem: Content): void {
-    // this.movieList.push(newContentItem);
-    // this.movieList = [...this.movieList];
+    // this.carList.push(newContentItem);
+    // this.carList = [...this.carList];
 
     this.carService.getCarList().subscribe(list => {
       this.carList = list;
     });
+  }
+
+  getSingleCar() {
+
   }
 }

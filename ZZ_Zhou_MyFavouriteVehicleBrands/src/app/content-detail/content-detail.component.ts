@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Content } from '../../helper-files/content-interface';
+import { CarService } from '../../app/services/content.service';
+import { ActivatedRoute } from '@angular/router';
+import { MessageService } from '../../app/services/message.service';
 
 @Component({
   selector: 'app-content-detail',
@@ -7,9 +12,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentDetailComponent implements OnInit {
 
-  constructor() { }
+  id?: number;
+  car?: Content;
+  constructor(private messageService: MessageService, private route: ActivatedRoute, private carService: CarService, private contentService: CarService) {}
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      this.id = Number(params.get('id') ?? 0);
+      this.carService.getSingleCar(this.id).subscribe(car => {
+        this.car = car;
+        this.messageService.add(`Content at id ${car.id} was retrieved, with a title of ${car.title}`)
+      });
+    });
   }
 
 }
