@@ -3,10 +3,14 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ContentDetailComponent } from '../app/content-detail/content-detail.component';
 import { ContentListComponent } from '../app/content-list/content-list.component';
+import { PageNotFoundComponent } from '../app/page-not-found/page-not-found.component';
 
-const routes: Routes = [{ path: 'id', component: ContentDetailComponent },
+const routes: Routes = [
+{ path: "list/:id", component:ContentDetailComponent },
 { path: 'list', component: ContentListComponent },
-{path: '/', component: ContentListComponent }];
+{ path: '', component: ContentListComponent },
+{ path: "**", component: PageNotFoundComponent }
+];
 
 @NgModule({
   declarations: [],

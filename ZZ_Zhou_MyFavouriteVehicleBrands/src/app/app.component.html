@@ -1,3 +1,11 @@
-<app-content-list></app-content-list>
+<app-app-messages></app-app-messages>
 
+<a routerLink="list" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+car List
+</a><br />
+<a routerLink="list/1" routerLinkActive="active">
+A single car display
+</a><br />
+<a routerLink="pagewillnotbefound" routerLinkActive="active">
+Invalid page
 <router-outlet></router-outlet>

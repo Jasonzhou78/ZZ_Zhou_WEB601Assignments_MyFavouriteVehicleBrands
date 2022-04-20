@@ -20,7 +20,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { ContentDetailComponent } from './content-detail/content-detail.component';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,9 @@ import { AppRoutingModule } from './app-routing.module';
     ModifyContentComponentComponent,
     CarDialogContentComponent,
     ContentDetailComponent,
+    routingComponents,
+    PageNotFoundComponent
+
   ],
   imports: [
     BrowserModule,
