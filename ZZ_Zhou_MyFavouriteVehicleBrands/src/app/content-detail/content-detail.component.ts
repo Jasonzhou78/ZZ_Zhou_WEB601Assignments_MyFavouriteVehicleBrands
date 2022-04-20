@@ -17,11 +17,13 @@ export class ContentDetailComponent implements OnInit {
   constructor(private messageService: MessageService, private route: ActivatedRoute, private carService: CarService, private contentService: CarService) {}
 
   ngOnInit(): void {
+
+    //paramMap is for retrieving a single value
     this.route.paramMap.subscribe(params => {
       this.id = Number(params.get('id') ?? 0);
       this.carService.getSingleCar(this.id).subscribe(car => {
         this.car = car;
-        this.messageService.add(`Content at id ${car.id} was retrieved, with a title of ${car.title}`)
+        this.messageService.add(`Car at id ${car.id} was retrieved, with a title of ${car.title}`)
       });
     });
   }

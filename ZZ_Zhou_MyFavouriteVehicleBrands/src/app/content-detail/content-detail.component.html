@@ -1,3 +1,9 @@
-<!-- <p>content-detail works!</p> -->
-
-<app-content-card> </app-content-card>
+<a [routerLink]="['/list',id]" routerLinkActive="active">
+    <h1>Car Details</h1>
+</a>
+<div class="detail">
+    <h3>This car has a ID: {{ id }}</h3>
+    <h3>This car has a Type: {{ car?.type??'no type for this car' }} </h3>
+    <h3>This car has a Title: {{car?.title}} </h3>
+    <img src="{{car?.imgURL}}" width="200px;">
+</div>

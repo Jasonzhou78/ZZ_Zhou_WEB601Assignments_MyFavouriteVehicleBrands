@@ -29,7 +29,7 @@ export class CarService {
   }
 
   getSingleCar(id: number): Observable<Content> {
-
+    console.log("Retrieving a observable content item!");
     return this.http.get<Content>("api/car/" + id);
     // if (id < MOVIELIST.length && id >= 0)
     // {
